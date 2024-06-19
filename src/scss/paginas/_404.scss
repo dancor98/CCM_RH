@@ -1,0 +1,25 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.pagina_404{
+    &__contenedor{
+        text-align: center;
+        border: 1px solid whitesmoke;
+        padding: 5rem;
+        margin-top: 2rem;
+
+    }
+    &__enlace{
+        @include m.boton(v.$azul, v.$blanco);
+        width: 30%;
+    }
+
+    &__heading{
+        margin-top: 0;
+        color: v.$blanco;
+    }
+    &__texto{
+        color: v.$blanco;
+    }
+}
+

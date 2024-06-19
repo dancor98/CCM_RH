@@ -1,0 +1,46 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.auth{
+    
+    padding: 3rem;
+    @include m.contenedor-sm;
+    border: 1px solid v.$blanco;
+    border-radius: 1rem;
+
+}
+
+.auth__heading{
+    font-size: 4rem;
+    color: v.$blanco;
+    text-align: center;
+    margin: 0;
+}
+
+
+.contenedor-login {
+    display: flex;
+    flex-wrap: wrap;
+   
+
+    &__left {
+        width: 100%;
+        @include m.desktop {
+            width: 60%;
+        }
+
+        &__titulo{
+            text-align: center;
+        }
+    }
+
+    &__right {
+        background-color: #1a1b15;
+        width: 100%;
+        padding:0 2rem;
+        // background-color: aquamarine;
+        @include m.desktop {
+            width: 40%;
+        }
+    }
+}

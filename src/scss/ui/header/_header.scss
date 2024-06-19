@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.navbar{
+    background-color: v.$gris-oscuro;
+    padding: 2rem;
+}
+.navbar-principal{
+    background-color: #1a1b15;
+    padding: 2rem;
+}
+
+button.navbar-toggler{
+    color: v.$blanco;
+}
+
+.nav-link{
+    all: unset;
+    color: v.$blanco;
+    &:hover{
+        background-color: v.$gris-claro;
+        padding: 1rem;
+        border-radius: 1rem;
+        color: v.$gris-oscuro;
+    }
+}
+
+.nav-item{
+    padding-right: 2rem;
+    margin: 2rem 0;
+}
+
+input.nav-link{
+    all: unset;
+    color: v.$blanco;
+}
+
+
+.icon-menu{
+    font-size: 3rem;
+}
+
+.navbar-logo{
+    width: 13rem;
+}

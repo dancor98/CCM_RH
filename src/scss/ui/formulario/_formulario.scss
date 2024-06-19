@@ -1,0 +1,122 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario{
+
+    display: flex;
+    flex-direction: column; 
+
+    &__fieldset{
+        border: none;
+        margin-top: 1rem;
+        padding: 0;
+    }
+    &__fieldset-boleta{
+        margin-top: 5rem;
+        padding: 0;
+    }
+
+    &__legend{
+        color: v.$gris;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        
+    }
+
+    &__campo{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+
+
+
+
+    &__contenedor-icono{
+        display: flex;
+        border-radius: .5rem;
+        overflow: hidden;
+    }
+    &__icono{
+        background-color: v.$gris-oscuro;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i{
+            color: v.$blanco;
+            font-size: 2rem;
+        }
+    }
+
+
+
+    &__label{
+        display: block;
+        font-size: 1.8rem;
+        color: rgb(v.$negro, .8);
+
+        &--login{
+            color: v.$blanco;
+        }
+    }
+    &__input, &__select, &__textarea{
+        padding: 1rem;
+        border: 1px solid darken(v.$gris-claro, 20);
+        border-radius: .5rem;
+        font-size: 2rem;
+
+        &--file{
+            border: none
+        }
+        &--sociales{
+            @extend .formulario__input;
+            flex: 1;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    &__radio{
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__texto{
+        margin-top: 3rem;
+    }
+    &__imagen{
+        max-width: 20rem;
+    }
+
+
+    &__listado{
+        @include m.tags;
+    }
+
+    &__submit{
+        @include m.boton(v.$rojo_claro, v.$blanco);
+        margin-top: 1rem;
+        width: auto;
+        @include m.tablet {
+            align-self: flex-end; 
+        }
+        border-radius: 1rem;
+
+        &--registrar{
+            width: 100%;
+        }
+    }
+
+}
+
+.row-campo{
+    margin-bottom: 2rem;
+}
+
+.error-message{
+    color: red;
+    display: none;
+    margin-top: 0.5rem;
+}

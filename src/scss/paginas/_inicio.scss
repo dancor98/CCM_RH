@@ -1,0 +1,61 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.contenedor-inicio {
+
+    margin: 0;
+    min-height: 20rem;
+    background-image: url('../img/CCM.png');
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center ;
+    @include m.tablet {
+        height: 80vh;
+    }
+}
+
+
+
+.contenedor-principal {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin: 3rem 1rem;
+    // justify-content: center; 
+    @include m.desktop {
+        margin: 3rem 20rem;
+    }
+
+    @include m.tablet {
+        margin: 3rem 5rem;
+    }
+
+    &__left {
+        width: 100%;
+        // background-color: aqua;
+        @include m.desktop {
+            width: 40%;
+            padding: 3rem 0rem;
+        }
+
+        &__titulo{
+            text-align: center;
+        }
+    }
+
+    &__right {
+        width: 100%;
+        // background-color: aquamarine;
+        @include m.desktop {
+            width: 59%;
+            padding: 3rem 0rem;
+        }
+        &__texto{
+            font-size: 2.5rem;
+            text-align: justify;
+        }
+    }
+}
