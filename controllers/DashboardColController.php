@@ -23,7 +23,7 @@ class DashboardColController
 
 
         $router->render('colaborador/dashboard/index', [
-            'titulo' => 'Panel de Colaborador',
+            'titulo' => 'Panel de Colaboradores',
             'colaborador' => $colaborador
         ]);
     }
